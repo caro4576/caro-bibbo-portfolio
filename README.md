@@ -13,3 +13,20 @@ experiencia de usuario y lógica básica con JavaScript y React.
 
 ## Deploy
 El sitio está deployado en Vercel.
+portfolio/
+│
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+├── assets/
+│   └── img/
+│       ├── sitio-digestivo.png
+│       ├── la-musa-incarnata.png
+│       ├── blog-de-cafe.png
+│       ├── festival-musica.png
+│       ├── cotizador-seguro-1.png
+│       └── trabajo_autodidacta.png
+└── README.md
+
