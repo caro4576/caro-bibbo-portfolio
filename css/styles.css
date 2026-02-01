@@ -1,0 +1,298 @@
+/* =====================
+   VARIABLES
+===================== */
+:root {
+    --bg-main: #e9e5dc;
+    --bg-card: #ffffff;
+    --accent: #6b8f71;
+    --accent-strong: #4f6f5a;
+    --text-main: #26332f;
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* =====================
+   NAV
+===================== */
+.main-nav {
+    position: sticky;
+    top: 0;
+    background: var(--bg-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.main-nav .logo {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* =====================
+   LAYOUT GENERAL
+===================== */
+section,
+header {
+    max-width: 960px;
+    margin: auto;
+    padding: 3.5rem 2rem;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero h1 {
+    margin-bottom: 0.8rem;
+}
+
+.hero p {
+    margin-bottom: 1.2rem;
+}
+
+.highlight {
+    opacity: 0.85;
+}
+
+/* =====================
+   BOTÓN
+===================== */
+.btn {
+    display: inline-block;
+    background: var(--text-main);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--accent-strong);
+    transform: translateY(-2px);
+}
+
+/* =====================
+   PROYECTOS
+===================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    margin: 0.4rem 0 0.6rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+}
+
+/* =====================
+   TAGS
+===================== */
+.project-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.project-tag.client {
+    background: #dfe7f3;
+    color: #3f5c8a;
+}
+
+.project-tag.practice {
+    background: #ede9e1;
+    color: #6b5e4a;
+}
+
+.project-tag.react {
+    background: #e0f2ee;
+    color: #2f6f64;
+}
+
+/* =====================
+   TECNOLOGÍAS
+===================== */
+.tech {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 0.8rem;
+}
+
+/* =====================
+   LINKS WEB / REPO
+===================== */
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    font-size: 0.8rem;
+    color: var(--text-main);
+    text-decoration: none;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.project-links a:hover {
+    opacity: 1;
+}
+
+/* =====================
+   SERVICIOS
+===================== */
+.services ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.services li {
+    margin-bottom: 0.5rem;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.site-footer {
+    background: var(--accent);
+    color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-icons a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    section,
+    header {
+        padding: 3rem 1.5rem;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
