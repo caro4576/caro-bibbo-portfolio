@@ -1,4 +1,6 @@
-const revealElements = document.querySelectorAll("section, .project-card");
+const revealElements = document.querySelectorAll(
+  ".hero, .about, section, .project-card",
+);
 
 const observer = new IntersectionObserver(
   (entries) => {

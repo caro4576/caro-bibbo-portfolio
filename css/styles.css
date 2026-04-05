@@ -26,12 +26,23 @@ body {
 }
 
 /* =====================
+   LAYOUT GENERAL
+===================== */
+section,
+header {
+    max-width: 960px;
+    margin: auto;
+    padding: 3.5rem 2rem;
+}
+
+/* =====================
    NAV
 ===================== */
 .main-nav {
     position: sticky;
     top: 0;
-    background: var(--bg-main);
+    background: rgba(233, 229, 220, 0.85);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,23 +85,27 @@ body {
 }
 
 /* =====================
-   LAYOUT GENERAL
-===================== */
-section,
-header {
-    max-width: 960px;
-    margin: auto;
-    padding: 3.5rem 2rem;
-}
-
-/* =====================
    HERO
 ===================== */
+.hero-kicker {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-strong);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
 .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    max-width: 700px;
     margin-bottom: 0.8rem;
 }
 
 .hero p {
+    max-width: 700px;
+    font-size: 1rem;
     margin-bottom: 1.2rem;
 }
 
@@ -98,16 +113,23 @@ header {
     opacity: 0.85;
 }
 
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
 /* =====================
-   BOTÓN
+   BOTONES
 ===================== */
 .btn {
     display: inline-block;
     background: var(--text-main);
     color: #fff;
-    padding: 0.5rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -116,6 +138,35 @@ header {
 .btn:hover {
     background: var(--accent-strong);
     transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background: var(--text-main);
+    color: #fff;
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 2rem 3rem;
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 760px;
+    margin-bottom: 1rem;
 }
 
 /* =====================
@@ -132,6 +183,7 @@ header {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -145,9 +197,14 @@ header {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 1rem;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #f3f1eb;
+    padding: 0.4rem;
 }
 
 .project-card h3 {
+    font-size: 1.2rem;
     margin: 0.4rem 0 0.6rem;
 }
 
@@ -228,43 +285,78 @@ header {
 }
 
 /* =====================
+   CONTACTO
+===================== */
+.contact p {
+    margin: 1rem 0 1.5rem;
+    max-width: 600px;
+}
+
+/* =====================
    FOOTER
 ===================== */
 .site-footer {
-    background: var(--accent);
+    background: var(--accent-strong);
     color: #fff;
-    padding: 3rem 2rem;
+    padding: 3.5rem 2rem;
     text-align: center;
     margin-top: 5rem;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
 }
 
 .footer-text {
-    font-size: 0.9rem;
-    margin-bottom: 1.2rem;
-    opacity: 0.9;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.92;
+    max-width: 500px;
+    margin-inline: auto;
 }
 
 .footer-icons {
     display: flex;
     justify-content: center;
     gap: 1.4rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .footer-icons a {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
     color: #fff;
-    font-size: 1.2rem;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
 }
 
 .footer-icons a:hover {
     transform: translateY(-3px);
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
 }
 
 .footer-copy {
-    font-size: 0.75rem;
-    opacity: 0.7;
+    font-size: 0.78rem;
+    opacity: 0.75;
+}
+
+/* =====================
+   ANIMACIONES
+===================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* =====================
@@ -276,23 +368,34 @@ header {
         gap: 0.8rem;
     }
 
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     section,
     header {
         padding: 3rem 1.5rem;
     }
 
+    .hero-actions,
     .project-links {
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 0.8rem;
     }
-}
-.reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card img {
+        aspect-ratio: auto;
+        padding: 0;
+        background: transparent;
+    }
 }
