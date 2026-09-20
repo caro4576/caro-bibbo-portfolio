@@ -1,21 +1,254 @@
-const revealElements = document.querySelectorAll(
-  ".hero, .about, section, .project-card",
-);
+<!DOCTYPE html>
+<html lang="es">
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.15,
-  },
-);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Caro Bibbo | Sitios web claros, modernos y funcionales</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-revealElements.forEach((el) => {
-  el.classList.add("reveal");
-  observer.observe(el);
-});
+    </head>
+
+    <body>
+    <nav class="main-nav">
+        <span class="logo">Caro Bibbo</span>
+        <ul>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+
+    <header class="hero">
+        <p class="hero-kicker">Diseño y desarrollo web</p>
+        <h1>Creo sitios web claros, modernos y funcionales para marcas y negocios</h1>
+    
+        <p>
+            Diseño y desarrollo landing pages y sitios web institucionales con una estética simple, profesional y enfocada
+            en comunicar mejor.
+        </p>
+    
+        <p class="highlight">
+            Trabajo con HTML, CSS y JavaScript, y me especializo en transformar ideas en sitios web prolijos, accesibles y
+            visualmente cuidados.
+        </p>
+    
+        <div class="hero-actions">
+            <a href="#proyectos" class="btn">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-outline">Contactar</a>
+        </div>
+    </header>
+    <section class="about">
+        <h2>Sobre mí</h2>
+        <p>
+            Soy desarrolladora frontend y trabajo creando sitios web simples, claros y funcionales para marcas,
+            emprendimientos y pequeños negocios.
+        </p>
+        <p>
+            Me interesa especialmente combinar diseño limpio, buena estructura y una experiencia web agradable para que cada
+            sitio se vea profesional y comunique mejor.
+        </p>
+    </section>
+
+    <section class="projects" id="proyectos">
+        <h2>Proyectos seleccionados</h2>
+    
+        <div class="projects-grid">
+    
+            <!-- CLIENTE -->
+            <article class="project-card">
+                <img src="assets/img/sitiodigestivo.jpeg" alt="Sitio Digestivo" />
+    
+                <span class="project-tag client">Cliente</span>
+    
+                <h3>IDEB Balcarce</h3>
+                <p>
+                    Rediseño y mejora visual de sitio institucional para un centro médico especializado.
+                    Se trabajó la estructura, claridad del contenido, navegación y presentación profesional del servicio.
+                </p>
+    
+                <span class="tech">HTML · CSS · JavaScript</span>
+    
+                <div class="project-links">
+                    <a href="https://idebbalcarce.com/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> Web
+                    </a>
+                </div>
+            </article>
+    
+            <!-- CLIENTE -->
+            <article class="project-card">
+                <img src="assets/img/la-musa-incarnata.png" alt="La Musa Incarnata" />
+    
+                <span class="project-tag client">Cliente</span>
+    
+                <h3>La Musa Incarnata</h3>
+                <p>
+                    Sitio web para marca de indumentaria con productos reales.
+                    Enfoque visual y presentación clara del catálogo.
+                </p>
+    
+                <span class="tech">HTML · CSS · JavaScript</span>
+    
+                <div class="project-links">
+                    <a href="https://caro4576.github.io/lamusaincarnata/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> Web
+                    </a>
+                </div>
+            </article>
+    
+            <!-- PRACTICA -->
+            <article class="project-card">
+                <img src="assets/img/Blog-De-Cafe.png" alt="Blog de Café" />
+    
+                <span class="project-tag practice">Práctica</span>
+    
+                <h3>Blog de Café</h3>
+                <p>
+                    Proyecto personal orientado al diseño visual y la maquetación de un blog temático.
+                    Enfoque en estructura de contenido, legibilidad y coherencia visual.
+                    Contenidos de ejemplo (lorem ipsum).
+                </p>
+    
+                <span class="tech">HTML · CSS</span>
+    
+                <div class="project-links">
+                    <a href="https://caro4576.github.io/Blog-De-Cafe/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> Web
+                    </a>
+                    <a href="https://github.com/caro4576/Blog-De-Cafe" target="_blank">
+                        <i class="fa-brands fa-github"></i> Repo
+                    </a>
+                </div>
+            </article>
+    
+            <!-- PRACTICA -->
+            <article class="project-card">
+                <img src="assets/img/festival-musica.png" alt="Festival de Música" />
+    
+                <span class="project-tag practice">Práctica</span>
+    
+                <h3>Festival de Música</h3>
+                <p>
+                    Landing page desarrollada como práctica frontend, enfocada en jerarquía visual,
+                    impacto gráfico y organización clara de la información.
+                </p>
+    
+                <span class="tech">HTML · CSS</span>
+    
+                <div class="project-links">
+                    <a href="https://caro4576.github.io/proyectofestivalmusica/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> Web
+                    </a>
+                    <a href="https://github.com/caro4576/proyectofestivalmusica" target="_blank">
+                        <i class="fa-brands fa-github"></i> Repo
+                    </a>
+                </div>
+            </article>
+    
+            <!-- REACT -->
+            <article class="project-card">
+                <img src="assets/img/cotizador-seguro-1.png" alt="Cotizador de Seguros" />
+    
+                <span class="project-tag react">React</span>
+    
+                <h3>Cotizador de Seguros</h3>
+                <p>
+                    Aplicación desarrollada en React enfocada en lógica, manejo de estado y flujo de datos.
+                    Simula un cotizador con cálculo dinámico según variables seleccionadas por el usuario.
+                </p>
+    
+                <span class="tech">React · JavaScript · CSS</span>
+    
+                <div class="project-links">
+                    <a href="https://cotizador-seguros-react-two.vercel.app/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> App
+                    </a>
+                    <a href="https://github.com/caro4576/cotizador-seguros-react" target="_blank">
+                        <i class="fa-brands fa-github"></i> Repo
+                    </a>
+                </div>
+            </article>
+    
+            <!-- PRACTICA -->
+            <article class="project-card">
+                <img src="assets/img/trabajo_autodidacta.png" alt="Práctica e-commerce" />
+    
+                <span class="project-tag practice">Práctica</span>
+    
+                <h3>Práctica e-commerce</h3>
+                <p>
+                    Proyecto de práctica personal que simula un e-commerce, enfocado en estructura frontend,
+                    maquetación de productos y flujo visual. Contenidos ilustrativos (lorem ipsum).
+                </p>
+    
+                <span class="tech">HTML · CSS · JavaScript</span>
+    
+                <div class="project-links">
+                    <a href="https://caro4576.github.io/trabajo_autodidacta/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> Web
+                    </a>
+                    <a href="https://github.com/caro4576/trabajo_autodidacta" target="_blank">
+                        <i class="fa-brands fa-github"></i> Repo
+                    </a>
+                </div>
+            </article>
+    
+        </div>
+    </section>
+
+
+
+        <section class="services" id="servicios">
+            <h2>Servicios</h2>
+        <ul>
+            <li>Landing pages para marcas, emprendimientos y profesionales</li>
+            <li>Sitios web institucionales claros y funcionales</li>
+            <li>Maquetación frontend en HTML, CSS y JavaScript</li>
+            <li>Mejoras visuales y optimización de experiencia de usuario</li>
+        </ul>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contacto</h2>
+            <p>
+                Si tenés una idea, una marca o un negocio y querés llevarlo a una web clara, prolija y profesional, escribime.
+            </p>
+        <a href="mailto:carobibbo76@gmail.com" class="btn">Escribime</a>
+        </section>
+    <footer class="site-footer">
+        <p class="footer-text">
+            Diseño y desarrollo web simple, claro y funcional
+        </p>
+    
+        <div class="footer-icons">
+            <a href="https://wa.me/5492266634460" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+    
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+    
+            <a href="https://github.com/caro4576" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+    
+            <a href="https://www.instagram.com/soycarobibbo/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    
+        <p class="footer-copy">© 2026 · Caro Bibbo</p>
+    </footer>
+
+
+
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
