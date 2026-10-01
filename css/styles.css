@@ -642,3 +642,99 @@ header {
         padding: 2.3rem 1.4rem;
     }
 }
+
+/* =====================
+   SECCIONES COMERCIALES
+===================== */
+
+.section-intro {
+    max-width: 720px;
+    margin: 0.8rem 0 1.5rem;
+    color: var(--text-soft);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.4rem;
+}
+
+.service-card {
+    position: relative;
+    padding: 1.35rem;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.035);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07);
+}
+
+.service-number {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: var(--accent-strong);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.service-card h3,
+.process-grid h3 {
+    margin-bottom: 0.45rem;
+    font-size: 1.05rem;
+}
+
+.service-card p,
+.process-grid p {
+    color: var(--text-soft);
+    font-size: 0.88rem;
+}
+
+.process {
+    padding-top: 1rem;
+    padding-bottom: 2.7rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.3rem;
+}
+
+.process-grid article {
+    padding: 1.15rem;
+    border-top: 2px solid var(--accent);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.process-grid article > span {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: var(--accent-strong);
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
