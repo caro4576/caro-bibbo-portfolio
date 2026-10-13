@@ -3,17 +3,17 @@
 ===================== */
 
 :root {
-    --bg-main: #e9e5dc;
-    --bg-card: #ffffff;
-    --bg-soft: #f3f1eb;
+    --bg-main: #f3e7d9;
+    --bg-card: #fbf4ea;
+    --bg-soft: #efe2d1;
 
-    --accent: #6b8f71;
-    --accent-strong: #4f6f5a;
+    --accent: #8a4a4a;
+    --accent-strong: #6b2a2a;
 
-    --text-main: #26332f;
-    --text-soft: #566059;
+    --text-main: #161412;
+    --text-soft: #5e5249;
 
-    --line: rgba(38, 51, 47, 0.10);
+    --line: rgba(22, 20, 18, 0.12);
 }
 
 
@@ -71,7 +71,7 @@ header {
     position: sticky;
     top: 0;
 
-    background: rgba(233, 229, 220, 0.88);
+    background: rgba(243, 231, 217, 0.88);
     backdrop-filter: blur(10px);
 
     display: flex;
@@ -80,7 +80,7 @@ header {
 
     padding: 1rem 2rem;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(22, 20, 18, 0.08);
 
     z-index: 100;
 }
@@ -164,9 +164,9 @@ header {
 .btn {
     display: inline-block;
     padding: 0.65rem 1.35rem;
-    background: var(--text-main);
+    background: var(--accent-strong);
     color: #fff;
-    border: 1px solid var(--text-main);
+    border: 1px solid var(--accent-strong);
     border-radius: 999px;
     font-size: 0.82rem;
     font-weight: 600;
@@ -177,18 +177,19 @@ header {
 }
 
 .btn:hover {
-    background: var(--accent-strong);
-    border-color: var(--accent-strong);
+    background: var(--text-main);
+    border-color: var(--text-main);
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--text-main);
+    color: var(--accent-strong);
 }
 
 .btn-outline:hover {
-    background: var(--text-main);
+    background: var(--accent-strong);
+    border-color: var(--accent-strong);
     color: #fff;
 }
 
@@ -374,18 +375,18 @@ header {
 }
 
 .project-tag.client {
-    background: #dfe7f3;
-    color: #3f5c8a;
+    background: var(--accent-strong);
+    color: #f3e7d9;
 }
 
 .project-tag.practice {
-    background: #ede9e1;
-    color: #6b5e4a;
+    background: #e8d9c6;
+    color: #5e5249;
 }
 
 .project-tag.react {
-    background: #e0f2ee;
-    color: #2f6f64;
+    background: #e3cdb8;
+    color: #4a1e1e;
 }
 
 
@@ -437,7 +438,8 @@ header {
 .more-projects summary {
     display: inline-block;
     padding: 0.6rem 1.2rem;
-    border: 1px solid var(--text-main);
+    border: 1px solid var(--accent-strong);
+    color: var(--accent-strong);
     border-radius: 999px;
     font-size: 0.82rem;
     font-weight: 600;
@@ -453,7 +455,7 @@ header {
 }
 
 .more-projects summary:hover {
-    background: var(--text-main);
+    background: var(--accent-strong);
     color: #fff;
 }
 
@@ -492,7 +494,7 @@ header {
 
 .stack-card {
     padding: 1.35rem;
-    background: rgba(255, 255, 255, 0.82);
+    background: rgba(251, 244, 234, 0.85);
     border: 1px solid var(--line);
     border-radius: 18px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.035);
@@ -525,7 +527,7 @@ header {
 .stack-items span {
     padding: 0.35rem 0.6rem;
     background: var(--bg-main);
-    border: 1px solid rgba(38, 51, 47, 0.06);
+    border: 1px solid rgba(22, 20, 18, 0.08);
     border-radius: 999px;
     font-size: 0.74rem;
     color: var(--text-main);
