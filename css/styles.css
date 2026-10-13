@@ -11,7 +11,7 @@
     --accent-strong: #4f6f5a;
 
     --text-main: #26332f;
-    --text-soft: #68716c;
+    --text-soft: #566059;
 
     --line: rgba(38, 51, 47, 0.10);
 }
@@ -36,6 +36,18 @@ body {
     background: var(--bg-main);
     color: var(--text-main);
     line-height: 1.6;
+}
+
+
+/* =====================
+   FOCO VISIBLE (teclado)
+===================== */
+
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--accent-strong);
+    outline-offset: 3px;
+    border-radius: 6px;
 }
 
 
@@ -116,15 +128,6 @@ header {
     padding-bottom: 2.7rem;
 }
 
-.hero-kicker {
-    margin-bottom: 0.7rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent-strong);
-}
-
 .hero h1 {
     max-width: 760px;
     margin-bottom: 0.8rem;
@@ -141,7 +144,6 @@ header {
 
 .hero .highlight {
     color: var(--accent-strong);
-    opacity: 0.9;
     font-size: 0.88rem;
     font-weight: 600;
     letter-spacing: 0.02em;
@@ -192,22 +194,277 @@ header {
 
 
 /* =====================
-   ABOUT
+   SERVICIOS
 ===================== */
 
-.about {
-    padding-top: 0.7rem;
+.services {
+    padding-top: 1.8rem;
     padding-bottom: 2.2rem;
 }
 
-.about h2,
-.projects > h2,
-.stack > h2,
 .services h2,
+.projects>h2,
+.about h2,
+.stack>h2,
 .contact h2 {
     margin-bottom: 0.8rem;
     font-size: 1.65rem;
     letter-spacing: -0.02em;
+}
+
+.services ul {
+    list-style: none;
+    margin-top: 0.8rem;
+}
+
+.services li {
+    max-width: 760px;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.services h3 {
+    margin-bottom: 0.15rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+}
+
+.services li p {
+    max-width: 62ch;
+    font-size: 0.92rem;
+    color: var(--text-soft);
+}
+
+.services-note {
+    max-width: 760px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+}
+
+
+/* =====================
+   PROYECTOS
+===================== */
+
+.projects {
+    padding-top: 1.8rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.045);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.075);
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    padding: 0.5rem;
+    margin-bottom: 0.9rem;
+    background: var(--bg-soft);
+    border-radius: 12px;
+}
+
+
+/* =====================
+   PROYECTO DESTACADO
+===================== */
+
+.project-featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 1.7rem;
+}
+
+.project-featured img {
+    width: 100%;
+    height: 330px;
+    margin-bottom: 0;
+    object-fit: contain;
+    background: var(--bg-soft);
+}
+
+.project-content {
+    padding-right: 0.5rem;
+}
+
+.project-featured h3 {
+    margin: 0.45rem 0 0.65rem;
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.project-featured p {
+    max-width: 560px;
+}
+
+
+/* =====================
+   TESTIMONIO (opcional)
+===================== */
+
+.testimonial {
+    margin: 0.2rem 0 0.8rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent);
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.78rem;
+    font-style: normal;
+    color: var(--text-soft);
+}
+
+
+/* =====================
+   TEXTOS PROYECTOS
+===================== */
+
+.project-card h3 {
+    margin: 0.3rem 0 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.project-card p {
+    margin-bottom: 0.65rem;
+    font-size: 0.92rem;
+    color: var(--text-soft);
+}
+
+
+/* =====================
+   TAGS
+===================== */
+
+.project-tag {
+    display: inline-block;
+    padding: 0.23rem 0.58rem;
+    margin-bottom: 0.3rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 600;
+}
+
+.project-tag.client {
+    background: #dfe7f3;
+    color: #3f5c8a;
+}
+
+.project-tag.practice {
+    background: #ede9e1;
+    color: #6b5e4a;
+}
+
+.project-tag.react {
+    background: #e0f2ee;
+    color: #2f6f64;
+}
+
+
+/* =====================
+   TECNOLOGÍAS
+===================== */
+
+.tech {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: var(--accent-strong);
+    font-size: 0.76rem;
+}
+
+
+/* =====================
+   LINKS
+===================== */
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--text-main);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    color: var(--accent-strong);
+}
+
+
+/* =====================
+   PROYECTOS DE PRÁCTICA (plegados)
+===================== */
+
+.more-projects {
+    margin-top: 1.5rem;
+}
+
+.more-projects summary {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--text-main);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.more-projects summary::-webkit-details-marker {
+    display: none;
+}
+
+.more-projects summary:hover {
+    background: var(--text-main);
+    color: #fff;
+}
+
+
+/* =====================
+   ABOUT
+===================== */
+
+.about {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
 }
 
 .about p {
@@ -276,193 +533,6 @@ header {
 
 
 /* =====================
-   PROYECTOS
-===================== */
-
-.projects {
-    padding-top: 1.8rem;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.project-card {
-    background: var(--bg-card);
-    padding: 1.5rem;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.045);
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.075);
-}
-
-.project-card img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: contain;
-    padding: 0.5rem;
-    margin-bottom: 0.9rem;
-    background: var(--bg-soft);
-    border-radius: 12px;
-}
-
-
-/* =====================
-   LA MUSA DESTACADA
-===================== */
-
-.project-featured {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1.35fr 1fr;
-    gap: 1.6rem;
-    align-items: center;
-    padding: 1.7rem;
-}
-
-.project-featured img {
-    width: 100%;
-    height: 330px;
-    margin-bottom: 0;
-    object-fit: contain;
-    background: var(--bg-soft);
-}
-
-.project-content {
-    padding-right: 0.5rem;
-}
-
-.project-featured h3 {
-    margin: 0.45rem 0 0.65rem;
-    font-size: 2rem;
-    line-height: 1.1;
-}
-
-.project-featured p {
-    max-width: 560px;
-}
-
-
-/* =====================
-   TEXTOS PROYECTOS
-===================== */
-
-.project-card h3 {
-    margin: 0.3rem 0 0.5rem;
-    font-size: 1.2rem;
-    line-height: 1.2;
-}
-
-.project-card p {
-    margin-bottom: 0.65rem;
-    font-size: 0.92rem;
-    color: var(--text-soft);
-}
-
-
-/* =====================
-   TAGS
-===================== */
-
-.project-tag {
-    display: inline-block;
-    padding: 0.23rem 0.58rem;
-    margin-bottom: 0.3rem;
-    border-radius: 999px;
-    font-size: 0.68rem;
-    font-weight: 600;
-}
-
-.project-tag.client {
-    background: #dfe7f3;
-    color: #3f5c8a;
-}
-
-.project-tag.practice {
-    background: #ede9e1;
-    color: #6b5e4a;
-}
-
-.project-tag.react {
-    background: #e0f2ee;
-    color: #2f6f64;
-}
-
-
-/* =====================
-   TECNOLOGÍAS
-===================== */
-
-.tech {
-    display: block;
-    margin-bottom: 0.65rem;
-    color: var(--accent-strong);
-    font-size: 0.76rem;
-    opacity: 0.85;
-}
-
-
-/* =====================
-   LINKS
-===================== */
-
-.project-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.project-links a {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    color: var(--text-main);
-    font-size: 0.78rem;
-    font-weight: 600;
-    text-decoration: none;
-    opacity: 0.8;
-}
-
-.project-links a:hover {
-    color: var(--accent-strong);
-    opacity: 1;
-}
-
-
-/* =====================
-   SERVICIOS
-===================== */
-
-.services {
-    padding-top: 2.7rem;
-    padding-bottom: 2.7rem;
-}
-
-.services ul {
-    list-style: none;
-    margin-top: 0.8rem;
-}
-
-.services li {
-    max-width: 760px;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--line);
-    font-size: 0.95rem;
-}
-
-
-/* =====================
    CONTACTO
 ===================== */
 
@@ -475,6 +545,12 @@ header {
     max-width: 620px;
     margin: 0.8rem 0 1.2rem;
     color: var(--text-soft);
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
 }
 
 
@@ -496,7 +572,6 @@ header {
     max-width: 500px;
     margin: 0 auto 1.2rem;
     font-size: 0.9rem;
-    opacity: 0.92;
 }
 
 .footer-icons {
@@ -527,9 +602,13 @@ header {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.footer-icons a:focus-visible {
+    outline-color: #fff;
+}
+
 .footer-copy {
     font-size: 0.76rem;
-    opacity: 0.75;
+    opacity: 0.9;
 }
 
 
@@ -548,6 +627,27 @@ header {
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+/* =====================
+   MENOS MOVIMIENTO
+===================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 
@@ -598,7 +698,8 @@ header {
         font-size: 2.25rem;
     }
 
-    .hero-actions {
+    .hero-actions,
+    .contact-actions {
         flex-direction: column;
     }
 
@@ -632,10 +733,6 @@ header {
 
     .project-links {
         flex-direction: row;
-    }
-
-    .services li {
-        padding: 0.65rem 0;
     }
 
     .site-footer {

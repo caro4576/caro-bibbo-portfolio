@@ -5,7 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Caro Bibbo | Web Developer</title>
+        <title>Caro Bibbo | Desarrolladora web: landings, correcciones y mantenimiento</title>
+        <meta name="description"
+            content="Landing pages, correcciones y mantenimiento web para negocios y profesionales. Mirá mis proyectos y pedí una revisión de tu sitio.">
+        <meta name="theme-color" content="#e9e5dc">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Caro Bibbo | Desarrolladora web">
+        <meta property="og:description"
+            content="Landing pages, correcciones y mantenimiento web para negocios y profesionales.">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -19,7 +27,7 @@
          NAV
     ===================== -->
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Principal">
 
             <span class="logo">
                 Caro Bibbo
@@ -27,15 +35,15 @@
 
             <ul>
                 <li>
+                    <a href="#servicios">Servicios</a>
+                </li>
+
+                <li>
                     <a href="#proyectos">Proyectos</a>
                 </li>
 
                 <li>
-                    <a href="#stack">Stack</a>
-                </li>
-
-                <li>
-                    <a href="#servicios">Servicios</a>
+                    <a href="#stack">Tecnologías</a>
                 </li>
 
                 <li>
@@ -45,513 +53,561 @@
 
         </nav>
 
+        <main>
 
-        <!-- =====================
+            <!-- =====================
          HERO
     ===================== -->
 
-        <header class="hero">
+            <header class="hero">
 
-            <p class="hero-kicker">
-                Diseño y desarrollo web
-            </p>
+                <h1>
+                    Landing pages, correcciones y mantenimiento web
+                    para negocios y profesionales
+                </h1>
 
-            <h1>
-                Desarrollo sitios y aplicaciones web
-                claras, funcionales y pensadas para
-                necesidades reales.
-            </h1>
-
-            <p>
-                Trabajo en frontend y backend, combinando diseño,
-                lógica, APIs y bases de datos.
-            </p>
-
-            <p class="highlight">
-                HTML · CSS · JavaScript · React · Node.js · Express · MongoDB
-            </p>
-
-            <div class="hero-actions">
-
-                <a href="#proyectos" class="btn">
-                    Ver proyectos
-                </a>
-
-                <a href="#contacto" class="btn btn-outline">
-                    Contactar
-                </a>
-
-            </div>
-
-        </header>
-
-
-        <!-- =====================
-         SOBRE MÍ
-    ===================== -->
-
-        <section class="about">
-
-            <h2>
-                Sobre mí
-            </h2>
-
-            <p>
-                Soy desarrolladora web y continúo mi formación en
-                programación backend.
-            </p>
-
-            <p>
-                Me interesa combinar una buena experiencia visual con
-                una estructura sólida, desde la interfaz hasta la
-                lógica y la gestión de datos.
-            </p>
-
-        </section>
-
-
-        <!-- =====================
-         STACK
-    ===================== -->
-
-        <section class="stack" id="stack">
-
-            <h2>
-                Stack tecnológico
-            </h2>
-
-            <div class="stack-grid">
-
-                <!-- FRONTEND -->
-
-                <article class="stack-card">
-
-                    <span class="stack-label">
-                        Frontend
-                    </span>
-
-                    <div class="stack-items">
-
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>Tailwind CSS</span>
-                        <span>Bootstrap</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- BACKEND -->
-
-                <article class="stack-card">
-
-                    <span class="stack-label">
-                        Backend
-                    </span>
-
-                    <div class="stack-items">
-
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>REST API</span>
-                        <span>MongoDB</span>
-                        <span>Mongoose</span>
-                        <span>SQL</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- HERRAMIENTAS -->
-
-                <article class="stack-card">
-
-                    <span class="stack-label">
-                        Herramientas
-                    </span>
-
-                    <div class="stack-items">
-
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>Vercel</span>
-                        <span>Hostinger</span>
-                        <span>Thunder Client</span>
-                        <span>Postman</span>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================
-         PROYECTOS
-    ===================== -->
-
-    <section class="projects" id="proyectos">
-    
-        <h2>Proyectos seleccionados</h2>
-    
-        <div class="projects-grid">
-    
-            <!-- LA MUSA — PROYECTO DESTACADO -->
-    
-            <article class="project-card project-featured">
-    
-                <div class="project-image">
-    
-                    <img src="assets/img/la-musa-incarnata.png" alt="La Musa Incarnata">
-    
-                </div>
-    
-                <div class="project-content">
-    
-                    <span class="project-tag client">
-                        Proyecto real
-                    </span>
-    
-                    <h3>
-                        La Musa Incarnata
-                    </h3>
-    
-                    <p>
-                        Sitio web para un artista independiente,
-                        concebido como un archivo vivo de obra,
-                        escritura y proyectos.
-                    </p>
-    
-                    <p>
-                        El proyecto incorpora un panel de administración,
-                        una API REST y persistencia de datos con MongoDB.
-                    </p>
-    
-                    <span class="tech">
-                        HTML · CSS · JavaScript · Node.js · Express · MongoDB · Mongoose
-                    </span>
-    
-                    <div class="project-links">
-    
-                        <a href="https://lamusaincarnata.com/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-globe"></i>
-                            Web
-                        </a>
-    
-                        <a href="https://github.com/caro4576/la-musa-blog" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-brands fa-github"></i>
-                            Repo
-                        </a>
-    
-                    </div>
-    
-                </div>
-    
-            </article>
-    
-    
-            <!-- COTIZADOR -->
-    
-            <article class="project-card">
-    
-                <img src="assets/img/cotizador-seguro-1.png" alt="Cotizador de Seguros">
-    
-                <span class="project-tag react">
-                    Académico
-                </span>
-    
-                <h3>
-                    Cotizador de Seguros
-                </h3>
-    
                 <p>
-                    Aplicación desarrollada en React con cálculo dinámico,
-                    validaciones, manejo de estado e historial mediante
-                    localStorage.
+                    Soy Caro, desarrolladora web. Armo tu landing, arreglo
+                    lo que no funciona en tu sitio y me ocupo de que siga
+                    andando bien.
                 </p>
-    
-                <span class="tech">
-                    React · Vite · JavaScript · Tailwind CSS
-                </span>
-    
-                <div class="project-links">
-    
-                    <a href="https://cotizador-seguros-react-two.vercel.app/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-globe"></i>
-                        App
-                    </a>
-    
-                    <a href="https://github.com/caro4576/cotizador-seguros-react" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                        Repo
-                    </a>
-    
-                </div>
-    
-            </article>
-    
-    
-            <!-- IDEB -->
-    
-            <article class="project-card">
-    
-                <img src="assets/img/sitiodigestivo.jpeg" alt="IDEB Balcarce">
-    
-                <span class="project-tag client">
-                    Cliente
-                </span>
-    
-                <h3>
-                    IDEB Balcarce
-                </h3>
-    
-                <p>
-                    Rediseño y desarrollo de sitio institucional,
-                    trabajando estructura, navegación y presentación
-                    clara de la información.
-                </p>
-    
-                <span class="tech">
-                    HTML · CSS · JavaScript
-                </span>
-    
-                <div class="project-links">
-    
-                    <a href="https://idebbalcarce.com/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-globe"></i>
-                        Web
-                    </a>
-    
-                </div>
-    
-            </article>
-    
-    
-            <!-- API CRUD -->
-    
-            <article class="project-card">
-    
-                <img src="assets/img/api-crud-perros.png" alt="API CRUD de Perros">
-    
-                <span class="project-tag practice">
-                    Backend
-                </span>
-    
-                <h3>
-                    API CRUD de Perros
-                </h3>
-    
-                <p>
-                    API REST desarrollada como parte de la Diplomatura
-                    Backend de UNTREF para gestionar una colección
-                    mediante operaciones CRUD.
-                </p>
-    
-                <span class="tech">
-                    Node.js · Express · MongoDB Atlas · Mongoose · dotenv
-                </span>
-    
-                <div class="project-links">
-    
-                    <a href="https://github.com/caro4576/ejercitacion-arquitectura-backend" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                        Repo
-                    </a>
-    
-                </div>
-    
-            </article>
-    
-    
-            <!-- E-COMMERCE -->
-    
-            <article class="project-card">
-    
-                <img src="assets/img/trabajo_autodidacta.png" alt="E-commerce">
-    
-                <span class="project-tag practice">
-                    Práctica
-                </span>
-    
-                <h3>
-                    E-commerce
-                </h3>
-    
-                <p>
-                    Proyecto de práctica enfocado en consumo de API,
-                    renderizado dinámico de productos y lógica de carrito.
-                </p>
-    
-                <span class="tech">
-                    HTML · CSS · JavaScript · API REST
-                </span>
-    
-                <div class="project-links">
-    
-                    <a href="https://caro4576.github.io/trabajo_autodidacta/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-globe"></i>
-                        Web
-                    </a>
-    
-                    <a href="https://github.com/caro4576/trabajo_autodidacta" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                        Repo
-                    </a>
-    
-                </div>
-    
-            </article>
-    
-    
-            <!-- FESTIVAL -->
-    
-            <article class="project-card">
-    
-                <img src="assets/img/festival-musica.png" alt="Festival de Música">
-    
-                <span class="project-tag practice">
-                    Práctica
-                </span>
-    
-                <h3>
-                    Festival de Música
-                </h3>
-    
-                <p>
-                    Landing page desarrollada como práctica frontend,
-                    enfocada en jerarquía visual, composición y
-                    responsive design.
-                </p>
-    
-                <span class="tech">
-                    HTML · CSS · Responsive Design
-                </span>
-    
-                <div class="project-links">
-    
-                    <a href="https://caro4576.github.io/proyectofestivalmusica/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-globe"></i>
-                        Web
-                    </a>
-    
-                    <a href="https://github.com/caro4576/proyectofestivalmusica" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                        Repo
-                    </a>
-    
-                </div>
-    
-            </article>
-    
-    
-            <!-- BLOG DE CAFÉ -->
-    
-            <article class="project-card">
-    
-                <img src="assets/img/Blog-De-Cafe.png" alt="Blog de Café">
-    
-                <span class="project-tag practice">
-                    Práctica
-                </span>
-    
-                <h3>
-                    Blog de Café
-                </h3>
-    
-                <p>
-                    Proyecto de maquetación frontend orientado a
-                    estructura de contenido, legibilidad y coherencia
-                    visual.
-                </p>
-    
-                <span class="tech">
-                    HTML · CSS
-                </span>
-    
-                <div class="project-links">
-    
-                    <a href="https://caro4576.github.io/Blog-De-Cafe/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-globe"></i>
-                        Web
-                    </a>
-    
-                    <a href="https://github.com/caro4576/Blog-De-Cafe" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-github"></i>
-                        Repo
-                    </a>
-    
-                </div>
-    
-            </article>
-    
-        </div>
-    
-    </section>
 
-        <!-- =====================
+                <p class="highlight">
+                    Trabajo con HTML, CSS, JavaScript, React, Node.js, Express y MongoDB.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="https://wa.me/5492266634460?text=Hola%20Caro%2C%20vi%20tu%20portfolio%20y%20quiero%20una%20revisi%C3%B3n%20de%20mi%20web."
+                        class="btn" target="_blank" rel="noopener noreferrer">
+                        Pedí una revisión de tu web
+                    </a>
+
+                    <a href="#proyectos" class="btn btn-outline">
+                        Ver proyectos
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================
          SERVICIOS
     ===================== -->
 
-        <section class="services" id="servicios">
+            <section class="services" id="servicios">
 
-            <h2>
-                Servicios
-            </h2>
+                <h2>
+                    Servicios
+                </h2>
 
-            <ul>
+                <ul>
 
-                <li>
-                    Landing pages para marcas, profesionales y emprendimientos
-                </li>
+                    <li>
+                        <h3>Landing pages</h3>
+                        <p>
+                            Una página clara que muestra quién sos, qué hacés y
+                            cómo contactarte. Se ve bien en celular y en compu,
+                            incluye formulario de contacto, está optimizada para
+                            buscadores y te la entrego lista para publicar.
+                        </p>
+                    </li>
 
-                <li>
-                    Sitios institucionales claros y responsive
-                </li>
+                    <li>
+                        <h3>Correcciones</h3>
+                        <p>
+                            Arreglo lo que no funciona en tu sitio: web lenta,
+                            diseño que se rompe en el celular, formularios o
+                            botones de WhatsApp que no responden.
+                        </p>
+                    </li>
 
-                <li>
-                    Desarrollo frontend con HTML, CSS, JavaScript y React
-                </li>
+                    <li>
+                        <h3>Mantenimiento mensual</h3>
+                        <p>
+                            Actualizaciones, solución de errores y soporte, para
+                            que no tengas que ocuparte de lo técnico.
+                        </p>
+                    </li>
 
-                <li>
-                    Integración de APIs y lógica de aplicaciones web
-                </li>
+                    <li>
+                        <h3>Revisión express de tu web</h3>
+                        <p>
+                            Reviso velocidad, versión celular, formularios y
+                            errores básicos, y te cuento qué conviene mejorar.
+                        </p>
+                    </li>
 
-                <li>
-                    Mantenimiento y mejoras de sitios existentes
-                </li>
+                </ul>
 
-            </ul>
+                <p class="services-note">
+                    ¿Necesitás algo con base de datos o API, como un panel de
+                    administración? También lo desarrollo, con Node.js, Express
+                    y MongoDB.
+                </p>
 
-        </section>
+            </section>
 
 
-        <!-- =====================
+            <!-- =====================
+         PROYECTOS
+    ===================== -->
+
+            <section class="projects" id="proyectos">
+
+                <h2>Proyectos seleccionados</h2>
+
+                <div class="projects-grid">
+
+                    <!-- IDEB — PROYECTO DESTACADO -->
+
+                    <article class="project-card project-featured">
+
+                        <div class="project-image">
+
+                            <img src="assets/img/sitiodigestivo.jpeg" alt="Sitio web de IDEB Balcarce">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-tag client">
+                                Cliente
+                            </span>
+
+                            <h3>
+                                IDEB Balcarce
+                            </h3>
+
+                            <p>
+                                Sitio institucional de un centro de diagnóstico
+                                digestivo. Rediseñé la estructura y la navegación
+                                para presentar estudios, profesionales y datos de
+                                contacto de forma clara, y sumé una sección de
+                                novedades.
+                            </p>
+
+                            <!-- TESTIMONIO: pedirle una frase corta a IDEB y ponerla acá, por ejemplo:
+                        <blockquote class="testimonial">"..." <cite>Nombre, IDEB Balcarce</cite></blockquote> -->
+
+                            <span class="tech">
+                                HTML, CSS, JavaScript
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://idebbalcarce.com/" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Web
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- LA MUSA -->
+
+                    <article class="project-card">
+
+                        <img src="assets/img/la-musa-incarnata.png" alt="La Musa Incarnata" loading="lazy">
+
+                        <span class="project-tag client">
+                            Proyecto real
+                        </span>
+
+                        <h3>
+                            La Musa Incarnata
+                        </h3>
+
+                        <p>
+                            Sitio web para un artista independiente, pensado como
+                            un archivo vivo de obra, escritura y proyectos. Incluye
+                            un panel de administración, una API REST y datos
+                            guardados en MongoDB.
+                        </p>
+
+                        <span class="tech">
+                            HTML, CSS, JavaScript, Node.js, Express, MongoDB, Mongoose
+                        </span>
+
+                        <div class="project-links">
+
+                            <a href="https://lamusaincarnata.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-globe"></i>
+                                Web
+                            </a>
+
+                            <a href="https://github.com/caro4576/la-musa-blog" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                Repo
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- COTIZADOR -->
+
+                    <article class="project-card">
+
+                        <img src="assets/img/cotizador-seguro-1.png" alt="Cotizador de Seguros" loading="lazy">
+
+                        <span class="project-tag react">
+                            Académico
+                        </span>
+
+                        <h3>
+                            Cotizador de Seguros
+                        </h3>
+
+                        <p>
+                            Aplicación en React que calcula la cotización al
+                            instante, valida los datos y guarda el historial en
+                            el navegador.
+                        </p>
+
+                        <span class="tech">
+                            React, Vite, JavaScript, Tailwind CSS
+                        </span>
+
+                        <div class="project-links">
+
+                            <a href="https://cotizador-seguros-react-two.vercel.app/" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-solid fa-globe"></i>
+                                App
+                            </a>
+
+                            <a href="https://github.com/caro4576/cotizador-seguros-react" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                Repo
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- API CRUD -->
+
+                    <article class="project-card">
+
+                        <img src="assets/img/api-crud-perros.png" alt="API CRUD de Perros" loading="lazy">
+
+                        <span class="project-tag practice">
+                            Backend
+                        </span>
+
+                        <h3>
+                            API CRUD de Perros
+                        </h3>
+
+                        <p>
+                            API REST hecha en la Diplomatura Backend de UNTREF
+                            para crear, leer, actualizar y borrar una colección
+                            de datos.
+                        </p>
+
+                        <span class="tech">
+                            Node.js, Express, MongoDB Atlas, Mongoose, dotenv
+                        </span>
+
+                        <div class="project-links">
+
+                            <a href="https://github.com/caro4576/ejercitacion-arquitectura-backend" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                Repo
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- PROYECTOS DE PRÁCTICA (plegados) -->
+
+                <details class="more-projects">
+
+                    <summary>Ver proyectos de práctica</summary>
+
+                    <div class="projects-grid">
+
+                        <article class="project-card">
+
+                            <img src="assets/img/trabajo_autodidacta.png" alt="E-commerce" loading="lazy">
+
+                            <span class="project-tag practice">
+                                Práctica
+                            </span>
+
+                            <h3>
+                                E-commerce
+                            </h3>
+
+                            <p>
+                                Tienda de práctica que consume una API, muestra
+                                los productos de forma dinámica y tiene carrito
+                                de compras.
+                            </p>
+
+                            <span class="tech">
+                                HTML, CSS, JavaScript, API REST
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://caro4576.github.io/trabajo_autodidacta/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Web
+                                </a>
+
+                                <a href="https://github.com/caro4576/trabajo_autodidacta" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                    Repo
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="project-card">
+
+                            <img src="assets/img/festival-musica.png" alt="Festival de Música" loading="lazy">
+
+                            <span class="project-tag practice">
+                                Práctica
+                            </span>
+
+                            <h3>
+                                Festival de Música
+                            </h3>
+
+                            <p>
+                                Landing de práctica enfocada en jerarquía visual,
+                                composición y diseño responsive.
+                            </p>
+
+                            <span class="tech">
+                                HTML, CSS, Responsive Design
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://caro4576.github.io/proyectofestivalmusica/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Web
+                                </a>
+
+                                <a href="https://github.com/caro4576/proyectofestivalmusica" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                    Repo
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="project-card">
+
+                            <img src="assets/img/Blog-De-Cafe.png" alt="Blog de Café" loading="lazy">
+
+                            <span class="project-tag practice">
+                                Práctica
+                            </span>
+
+                            <h3>
+                                Blog de Café
+                            </h3>
+
+                            <p>
+                                Maquetación de un blog con foco en la estructura
+                                del contenido, la legibilidad y la coherencia
+                                visual.
+                            </p>
+
+                            <span class="tech">
+                                HTML, CSS
+                            </span>
+
+                            <div class="project-links">
+
+                                <a href="https://caro4576.github.io/Blog-De-Cafe/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Web
+                                </a>
+
+                                <a href="https://github.com/caro4576/Blog-De-Cafe" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fa-brands fa-github"></i>
+                                    Repo
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </details>
+
+            </section>
+
+
+            <!-- =====================
+         SOBRE MÍ
+    ===================== -->
+
+            <section class="about" id="sobre-mi">
+
+                <h2>
+                    Sobre mí
+                </h2>
+
+                <p>
+                    Soy Caro Bibbo, desarrolladora web. Armo landings y sitios
+                    para negocios y profesionales, y me ocupo de corregirlos y
+                    mantenerlos.
+                </p>
+
+                <p>
+                    Me formé en la Diplomatura en Desarrollo Web Frontend de la
+                    UNTREF y hoy curso la Diplomatura en Programación Backend.
+                    Trabajo de forma remota.
+                </p>
+
+            </section>
+
+
+            <!-- =====================
+         STACK
+    ===================== -->
+
+            <section class="stack" id="stack">
+
+                <h2>
+                    Tecnologías
+                </h2>
+
+                <div class="stack-grid">
+
+                    <!-- FRONTEND -->
+
+                    <article class="stack-card">
+
+                        <span class="stack-label">
+                            Frontend
+                        </span>
+
+                        <div class="stack-items">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>Tailwind CSS</span>
+                            <span>Bootstrap</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BACKEND -->
+
+                    <article class="stack-card">
+
+                        <span class="stack-label">
+                            Backend
+                        </span>
+
+                        <div class="stack-items">
+
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>REST API</span>
+                            <span>MongoDB</span>
+                            <span>Mongoose</span>
+                            <span>SQL</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- HERRAMIENTAS -->
+
+                    <article class="stack-card">
+
+                        <span class="stack-label">
+                            Herramientas
+                        </span>
+
+                        <div class="stack-items">
+
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Vercel</span>
+                            <span>Hostinger</span>
+                            <span>Thunder Client</span>
+                            <span>Postman</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================
          CONTACTO
     ===================== -->
 
-        <section id="contacto" class="contact">
+            <section id="contacto" class="contact">
 
-            <h2>
-                ¿Hablamos?
-            </h2>
+                <h2>
+                    ¿Hablamos?
+                </h2>
 
-            <p>
-                Si tenés una idea, un proyecto o un negocio y necesitás
-                una solución web, escribime.
-            </p>
+                <p>
+                    Contame qué necesitás y te digo cómo lo resolvería y en
+                    cuánto tiempo.
+                </p>
 
-            <a href="mailto:carobibbo76@gmail.com" class="btn">
-                Escribime
-            </a>
+                <div class="contact-actions">
 
-        </section>
+                    <a href="https://wa.me/5492266634460?text=Hola%20Caro%2C%20vi%20tu%20portfolio%20y%20quiero%20consultarte%20por%20mi%20web."
+                        class="btn" target="_blank" rel="noopener noreferrer">
+                        Escribime por WhatsApp
+                    </a>
+
+                    <a href="mailto:carobibbo76@gmail.com" class="btn btn-outline">
+                        Mandame un email
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
 
 
         <!-- =====================
@@ -561,7 +617,7 @@
         <footer class="site-footer">
 
             <p class="footer-text">
-                Desarrollo web · Frontend · Backend
+                Desarrollo web, frontend y backend
             </p>
 
             <div class="footer-icons">
@@ -592,8 +648,6 @@
 
         </footer>
 
-
-        <script src="js/main.js"></script>
 
     </body>
 
